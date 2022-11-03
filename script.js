@@ -43,7 +43,7 @@ else {
         alert("You hide in your bed the intruder found you, you lose try again.");
     }
     else{
-        alert("You wait at the door ready to fight the robber you lose, try again.");
+        alert("You wait at the door ready to fight the robber you lose, try againfff.");
     }
 
 }
