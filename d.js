@@ -1,20 +1,16 @@
 var textElement = document.getElementById('text')
 var ChoiceButtonsElement = document.getElementById('Choice-buttons')
-
 let state = {}
-
 function startGame() {
   state = {}
   showTextNode(1)
 }
-
 function showTextNode(textNodeIndex) {
   var textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
   while (ChoiceButtonsElement.firstChild) {
     ChoiceButtonsElement.removeChild(ChoiceButtonsElement.firstChild)
   }
-
   textNode.Choices.forEach(Choice => {
     if (showChoice(Choice)) {
       var button = document.createElement('button') 
