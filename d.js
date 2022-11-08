@@ -1,5 +1,5 @@
-const textElement = document.getElementById('text')
-const ChoiceButtonsElement = document.getElementById('Choice-buttons')
+var textElement = document.getElementById('text')
+var ChoiceButtonsElement = document.getElementById('Choice-buttons')
 
 let state = {}
 
@@ -26,17 +26,17 @@ function showTextNode(textNodeIndex) {
   })
 }
 function showChoice(Choice) {
-  return Choice.requiredState == null || Choice.requiredState(state)
+  return Choice.requiredState == null || (state)
 }
 function selectChoice(Choice) {
   var nextTextNodeId = Choice.nextText
   if (nextTextNodeId <= 0) {
     return startGame()
   }
-  state = Object.assign(state, Choice.setState)
+  state = Object.assign(state)
   showTextNode(nextTextNodeId)
 }
-const textNodes = [
+var textNodes = [
   {
     id: 1,
     text: 'You wake up in the middle of the night, you heard a loud bang in your house. Check it out? or Hide.',
