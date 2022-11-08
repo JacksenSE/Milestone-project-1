@@ -1,5 +1,5 @@
 var textElement = document.getElementById('text')
-var ChoiceButtonsElement = document.getElementById('Choice-buttons')
+var choiceButtonsElement = document.getElementById('Choice-buttons')
 let state = {}
 function startGame() {
   state = {}
@@ -8,8 +8,8 @@ function startGame() {
 function showTextNode(textNodeIndex) {
   var textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
-  while (ChoiceButtonsElement.firstChild) {
-    ChoiceButtonsElement.removeChild(ChoiceButtonsElement.firstChild)
+  while (choiceButtonsElement.firstChild) {
+    choiceButtonsElement.removeChild(choiceButtonsElement.firstChild)
   }
   textNode.Choices.forEach(Choice => {
     if (showChoice(Choice)) {
@@ -17,7 +17,7 @@ function showTextNode(textNodeIndex) {
       button.innerText = Choice.text 
       button.classList.add('btn')
       button.addEventListener('click', () => selectChoice(Choice))
-      ChoiceButtonsElement.appendChild(button)
+      choiceButtonsElement.appendChild(button)
     }
   })
 }

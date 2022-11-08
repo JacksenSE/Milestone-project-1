@@ -45,8 +45,8 @@ Body{
     box-shadow: 0 0 10px 2px;
 }
 
-  text{
-    font: 100;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 100000;
-  }
+.text{
+
+  font-family: Roboto;
+  font-size: large;
+}
