@@ -3,9 +3,10 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
-  }
-  @keyframes gradient {
-    0% {
+  } 
+  /* this code was taken from https://1stwebdesigner.com/15-css-background-effects/ */
+  @keyframes gradient { 
+    0% {    
       background-position: 0% 50%;
     }
     50% {
@@ -15,15 +16,24 @@ body {
       background-position: 0% 50%;
     }
   }
+
+  .btn{
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 500px;
+    padding: 10px 100px;
+    color: white;
+    outline: none;
+  }
+
 Body{
+  width: 100vw;
+  height: 100vh;
     padding: 0;
     margin: 0;
     display: flex;
+    background-color: rgb(73, 70, 70);
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(73, 70, 70);
 }
 
 .container{
@@ -34,14 +44,6 @@ Body{
     border-radius: 20px;
     box-shadow: 0 0 10px 2px;
 }
-
-.btn{
-    background-color: hsl(0, 0%, 0%);
-    border-radius: 500px;
-    padding: 10px 100px;
-    color: white;
-    outline: none;
-  }
 
   text{
     font: 100;
